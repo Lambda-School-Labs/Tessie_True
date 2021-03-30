@@ -42,6 +42,10 @@ for file in glob.glob("**/*.png", recursive=True):
     window_size = 25
     thresh_sauvola = threshold_sauvola(img, window_size=window_size)
     binary_sauvola = img > thresh_sauvola
+    unit_img = img_as_ubyte(binary_sauvola)
+    
+    print(f"Writing {file}_bw")
+    imsave(f"{file}_bw.png", unit_img)
     
     print(f"Writing {file}_bw")
     imsave(f"{file}__SauvolaThresh.png", binary_sauvola)
