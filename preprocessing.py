@@ -46,6 +46,3 @@ for file in glob.glob("**/*.png", recursive=True):
     
     print(f"Writing {file}_bw")
     imsave(f"{file}_bw.png", unit_img)
-    
-    print(f"Writing {file}_bw")
-    imsave(f"{file}__SauvolaThresh.png", binary_sauvola)
